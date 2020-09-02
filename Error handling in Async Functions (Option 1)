@@ -1,0 +1,13 @@
+// Error handling Option # 1
+
+async function getPlanets(){
+	const response=await axios.get("https://swapi.dev/api/planetass/")  
+	console.log(response.data)
+}
+
+
+// Use a catch() block
+getPlanets().catch((err)=>{
+	console.log("AN ERROR OCCURED")
+	console.log(err)
+})
