@@ -1,0 +1,19 @@
+// Error handling Option # 2
+
+
+// using try catch
+async function getPlanets(){
+	
+		const response=await axios.get("https://swapi.dev/api/planets/")  
+		console.log(response.data)
+	
+}
+
+
+getPlanets().catch((err)=>{
+	console.log("Error occured")
+})
+
+// Note: 
+// 1-The Try-Catch approach will catch errors for the specific promise
+// 2-The .catch() block will catch all the errors
