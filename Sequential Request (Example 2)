@@ -1,0 +1,23 @@
+// Without async function
+ function changeColor(color,delay){
+	return new Promise((resolve,reject)=>{
+		setTimeout(() => {
+			document.body.style.backgroundColor=color
+			resolve()
+		}, delay);
+	})
+}
+changeColor("green",2000)
+
+
+// Sequential Approach
+async function startLightShow(){
+	await changeColor("green",1000)
+	await changeColor("red",1000)
+	await changeColor("teal",1000)
+	await changeColor("indigo",1000)
+	await changeColor("brown",1000)
+	await changeColor("black",1000)
+}
+startLightShow()
+
