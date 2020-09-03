@@ -8,8 +8,8 @@ async function getPokemonParallel(){
 	// const poke1=await promise1;
 	// const poke2=await promise2;
 	// const poke3=await promise3;
-	const results= await Promise.all([promise1,promise2,promise3])
-	print(results)
+	const results= await Promise.all([promise1,promise2,promise3]) //all promises must be resolved here
+	print(results) //this will run when all the promises are resolved
 	
 	
 
