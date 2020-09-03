@@ -1,0 +1,27 @@
+
+async function getPokemonParallel(){
+
+	const promise1= axios.get("https://pokeapi.co/api/v2/pokemon/1") 
+	const promise2= axios.get("https://pokeapi.co/api/v2/pokemon/2") 
+	const promise3= axios.get("https://pokeapi.co/api/v2/pokemon/3") 
+
+	// const poke1=await promise1;
+	// const poke2=await promise2;
+	// const poke3=await promise3;
+	const results= await Promise.all([promise1,promise2,promise3])
+	print(results)
+	
+	
+
+}
+
+getPokemonParallel()
+
+
+function print(results){
+	for(let pokemon of results){
+		console.log(pokemon.data.name)
+	}
+	
+}
+
