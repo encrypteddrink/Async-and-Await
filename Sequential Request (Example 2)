@@ -10,7 +10,7 @@
 changeColor("green",2000)
 
 
-// Sequential Approach (takes 4 seconds)
+// Sequential Approach (takes 4+ seconds)
 // because they are running in sequence and no other await will start until the previos one finishes
 async function startLightShow(){
 	await changeColor("green",1000)
